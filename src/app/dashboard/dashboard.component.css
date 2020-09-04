@@ -1,0 +1,116 @@
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+    .img{
+    width: 15%;
+    display: inline-block;
+    }
+    .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th{
+        width: 22%;
+    }
+    .description{
+        position: relative;
+        bottom: 9px;
+        left: 10px;
+    }
+    .location_desc{
+        font-size: 9px;
+        color: #bbb4b4;
+    }
+    .time{
+        font-weight: 600;
+    font-size: 22px;
+    font-family: monospace;
+    display: block;
+    }
+    .refundable{
+        font-size: 10px;
+        padding-top: 14px;
+        color: #bbb4b4;
+        display: block;
+    }
+    .location{
+        margin-bottom: 3px;
+    }
+    .duration{
+        position: relative;
+        top: 71px;
+        font-weight: 600;
+        font-size: 22px;
+        font-family: monospace;
+        display: block;
+    }
+    .arrival{
+        position: relative;
+        top: 48px;
+    }
+    .noCost{
+        color: #bbb4b4;
+        font-size: 13px;
+        position: relative;
+        bottom: 12px;
+    }
+    .fair_price{
+        position: relative;
+        top: 70px;
+    }
+    .disc{
+        font-weight: 600;
+        color: #000;
+    }
+    .btn{
+        background: #f37638;
+        padding: 6px 36px;
+        color: #fff;
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+    .btn_book{
+        position: relative;
+        top: 70px;
+    }
+    .btn_book span{
+        position: relative;
+        top: 8px;
+        left: 17px;
+    }
+    .section{
+        background-color: #fff;
+    }
+    .wrapper{
+        background-color: #e1e7ee;
+        margin: 45px 0px;
+    }
+    .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th{
+        background-color: #fff;
+    }
+    .sort-info {
+        background: #fff;
+        padding: 12px 0px 12px 0px;
+        position: relative;
+        top: 45px;
+    }
+    .bttn{
+        text-align: right;
+        display: inline-block;
+        position: relative;
+        top: 40px;
+        left: 12px;
+        font-size: 14px;
+    }
+    .info{
+        cursor: pointer;
+    }
+    .table-striped>tbody>tr {
+        background-color: #fff;
+    }

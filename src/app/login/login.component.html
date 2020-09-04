@@ -1,0 +1,30 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <p *ngIf="errorMsg" class="error">UserID and password did not match</p>
+      <h1>User Login</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginform" (ngSubmit)="onSubmitted(loginform)">
+      <input type="text" formControlName="Username" class="fadeIn second" placeholder="username" [ngClass]="{ 'is-invalid': isSubmitted && formControls.Username.errors }">
+      <div style="color:#ff2121" *ngIf="isSubmitted && formControls.Username.errors" class="invalid-feedback">
+        <div *ngIf="formControls.Username.errors.required"> Username Required.</div>
+    </div>
+      <input type="text"  class="fadeIn third" placeholder="password" formControlName="Password" Placeholder="Password" [ngClass]="{ 'is-invalid':  isSubmitted && formControls.Password.errors }">
+      <div style="color:#ff2121" *ngIf="isSubmitted && formControls.Password.errors" class="invalid-feedback">
+        <div *ngIf="formControls.Password.errors.required"> Password Required.</div>
+    </div>
+      
+      <span class="bttn"><button class="btn btn-dark fadeIn fourth" >Log In</button></span>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover">Forgot Password</a>
+    </div>
+
+  </div>
+</div>

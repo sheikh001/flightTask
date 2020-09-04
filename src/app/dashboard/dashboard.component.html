@@ -1,0 +1,89 @@
+<div class="section">
+  <div class="container">
+    <div class="row col-md-12 custyle wrapper">
+      <div class="bttn"><span>Sort By</span> </div>
+      <div class="sort-info clearfix">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="info">
+            <span></span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="info">
+            <span>DEPARTURE</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="info">
+            <span (click)="sortBytime('Duration')">DURATION</span>
+            <span class="glyphicon glyphicon-arrow-up" *ngIf="!Durationtoggle_menu"></span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="info">
+            <span>ARRIVAL</span>
+            
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="info">
+            <span (click)="sortByPrice('price')">PRICE</span>
+            <span class="glyphicon glyphicon-arrow-up" *ngIf="!pricetoggle_menu"></span>
+         
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped custab">
+        <tr *ngFor="let data of flightDetails.FlightRow">
+          <td>
+            <div>
+              <p>
+                <span class="img"><img src="{{data.ProductImg}}" class="img-responsive"> </span>
+                <span class="description">{{data.productName}}</span>
+              </p>
+              <p class="location">{{data.departureShort}} <span class="location_desc">{{data.departure}}</span>,<span class="location_desc">{{data.departureCountry}}</span></p>
+              <span class="time">{{data.departureTime}}</span>
+              <span class="refundable">{{data.RefundableInfo}}</span>
+            </div>
+          </td>
+          <td>
+           <span class="duration">{{data.Duration}}</span></td>
+          <td>
+            <div class="arrival">
+            <p class="location">{{data.arrivalShort}} <span class="location_desc">{{data.arrival}}</span>,<span class="location_desc">{{data.arrivalCountry}}</span></p>
+            <p class="time">{{data.arrivalTime}}</p>
+          </div>
+          </td>
+          <td>
+            <div class="fair_price">
+              <p class="time">Rs {{data.price}}</p>
+              <p class="noCost">{{data.noCostDesc}}<span class="disc"> {{data.noCostPrice}}</span></p>
+            </div>
+          </td>
+          <td>
+            <div class="btn_book">
+            <input type="button" class="btn" value="Book">
+            <span>Flight Details</span>
+          </div>
+          </td>
+        </tr>
+        <!-- <tr>
+          <td>2</td>
+          <td>Products</td>
+          <td>Main Products</td>
+          <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span>
+              Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Blogs</td>
+          <td>Parent Blogs</td>
+          <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span>
+              Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+          </td>
+        </tr> -->
+      </table>
+    </div>
+  </div>
+</div>
